@@ -1,24 +1,6 @@
 <template>
   <div id="app">
-    <el-header>
-      <div id="nav">
-        <el-row>
-          <el-col :span="12">
-            <router-link to="/">
-              <img alt="praeco" src="@/assets/logo.png">
-            </router-link>
-          </el-col>
-          <el-col :span="12" align="right">
-            <p>
-              <UpdateIndicator />
-              <el-tag type="info" class="m-w-xs">
-                elastalert status: {{ $store.state.server.status || '?' }}
-              </el-tag>
-            </p>
-          </el-col>
-        </el-row>
-      </div>
-    </el-header>
+
 
     <Split style="height: calc(100% - 48px)" @onDragEnd="onDragEnd">
       <SplitArea :size="sidebarWidth[0]" :min-size="0" style="background: #f8f8fb">

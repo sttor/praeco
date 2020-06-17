@@ -112,6 +112,7 @@ export default new Router({
       name: 'templateview',
       props: route => ({ ...route.params, ...route.query }),
       component: TemplateView
-    }
+    },
+    { path: '*', redirect: '/' }
   ]
 });
